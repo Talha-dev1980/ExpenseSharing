@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.sharing.expenses.androidapp.expensesharing",
+    "sha256_cert_fingerprints":
+    ["7D:25:16:A4:77:39:4B:AC:3E:D6:8E:A1:73:89:E6:3D:5D:B7:7F:03:D0:A3:33:4C:DE:9E:43:EE:72:71:CB:E1"]
+  }
+}]
