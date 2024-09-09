@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Group</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            max-width: 400px;
+        }
+        .open-app-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Open the App to Join the Group</h1>
+        <p>Click the button below to open the app and join the group.</p>
+        <button class="open-app-button" onclick="openApp()">Open App</button>
+        <p>If the app does not open, please ensure it is installed on your device.</p>
+    </div>
+
+    <script>
+        function openApp() {
+            // Replace 'myapp' with your actual app scheme (e.g., 'expenseshareapp://')
+            const groupParam = new URLSearchParams(window.location.search).get('group');
+            window.location.href = `expenseshareapp://join?group=${groupParam}`;
+
+            // Fallback in case the app doesn't open
+            setTimeout(() => {
+                alert('Unable to open the app. Please make sure it is installed.');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
